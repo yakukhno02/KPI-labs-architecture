@@ -6,6 +6,7 @@ import ua.kpi.bank.domain.model.Account;
 import ua.kpi.bank.domain.repository.AccountRepository;
 import ua.kpi.bank.infrastructure.mapper.AccountMapper;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -14,6 +15,14 @@ import java.util.UUID;
 public class AccountRepositoryImpl implements AccountRepository {
 
     private final JpaAccountRepository jpaRepository;
+
+    @Override
+    public List<Account> findAll() {
+        return jpaRepository.findAll()
+                .stream()
+                .map(AccountMapper::toDomain)
+                .toList();
+    }
 
     @Override
     public Optional<Account> findById(UUID id) {
