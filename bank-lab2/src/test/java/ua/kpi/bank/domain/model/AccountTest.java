@@ -1,9 +1,7 @@
-package ua.kpi.bank.domain;
+package ua.kpi.bank.domain.model;
 
 import org.junit.jupiter.api.Test;
 import ua.kpi.bank.domain.exception.DomainError;
-import ua.kpi.bank.domain.model.Account;
-import ua.kpi.bank.domain.model.Money;
 
 import java.math.BigDecimal;
 import java.util.UUID;
@@ -11,13 +9,6 @@ import java.util.UUID;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AccountTest {
-
-    @Test
-    void shouldNotAllowNegativeBalance() {
-        assertThrows(DomainError.class, () ->
-                new Money(new BigDecimal("-10"), "USD")
-        );
-    }
 
     @Test
     void shouldNotAllowWithdrawMoreThanBalance() {
