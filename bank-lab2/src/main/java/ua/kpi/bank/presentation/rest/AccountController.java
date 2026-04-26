@@ -52,4 +52,40 @@ public class AccountController {
                 acc.getBalance().getCurrency()
         );
     }
+
+    @PostMapping("/{id}/deposit")
+    public AccountResponse deposit(
+            @PathVariable UUID id,
+            @RequestBody CreateAccountRequest request
+    ) {
+        var acc = accountService.deposit(
+                id,
+                request.amount,
+                request.currency
+        );
+
+        return new AccountResponse(
+                acc.getId(),
+                acc.getBalance().getAmount(),
+                acc.getBalance().getCurrency()
+        );
+    }
+
+    @PostMapping("/{id}/withdraw")
+    public AccountResponse withdraw(
+            @PathVariable UUID id,
+            @RequestBody CreateAccountRequest request
+    ) {
+        var acc = accountService.withdraw(
+                id,
+                request.amount,
+                request.currency
+        );
+
+        return new AccountResponse(
+                acc.getId(),
+                acc.getBalance().getAmount(),
+                acc.getBalance().getCurrency()
+        );
+    }
 }
