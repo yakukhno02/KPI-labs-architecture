@@ -2,6 +2,7 @@ package ua.kpi.bank.application.command;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
+import ua.kpi.bank.application.service.AuditService;
 import ua.kpi.bank.domain.model.Money;
 import ua.kpi.bank.domain.repository.AccountRepository;
 
@@ -10,6 +11,7 @@ import ua.kpi.bank.domain.repository.AccountRepository;
 public class DepositHandler {
 
     private final AccountRepository accountRepository;
+    private final AuditService auditService;
 
     public void handle(DepositCommand command) {
         var account = accountRepository.findById(command.accountId())
@@ -21,5 +23,8 @@ public class DepositHandler {
         ));
 
         accountRepository.save(account);
+        auditService.log(
+                "Deposit: " + command.amount() + " " + command.currency()
+        );
     }
 }
