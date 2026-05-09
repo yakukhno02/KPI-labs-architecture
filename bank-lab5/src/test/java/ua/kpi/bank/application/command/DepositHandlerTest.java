@@ -6,7 +6,7 @@ import ua.kpi.bank.core.application.command.CreateAccountCommand;
 import ua.kpi.bank.core.application.command.CreateAccountHandler;
 import ua.kpi.bank.core.application.command.DepositCommand;
 import ua.kpi.bank.core.application.command.DepositHandler;
-import ua.kpi.bank.core.application.event.MoneyDepositedEvent;
+import ua.kpi.bank.core.api.MoneyDepositedEvent;
 import ua.kpi.bank.core.application.service.AuditService;
 import ua.kpi.bank.core.domain.factory.AccountFactory;
 import ua.kpi.bank.core.domain.repository.AccountRepository;

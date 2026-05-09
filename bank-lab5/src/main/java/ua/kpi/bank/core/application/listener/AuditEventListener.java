@@ -3,7 +3,7 @@ package ua.kpi.bank.core.application.listener;
 import org.springframework.context.event.EventListener;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
-import ua.kpi.bank.core.application.event.MoneyDepositedEvent;
+import ua.kpi.bank.core.api.MoneyDepositedEvent;
 
 @Component
 public class AuditEventListener {

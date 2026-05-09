@@ -3,7 +3,7 @@ package ua.kpi.bank.core.application.command;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Component;
-import ua.kpi.bank.core.application.event.MoneyDepositedEvent;
+import ua.kpi.bank.core.api.MoneyDepositedEvent;
 import ua.kpi.bank.core.application.service.AuditService;
 import ua.kpi.bank.core.domain.model.Money;
 import ua.kpi.bank.core.domain.repository.AccountRepository;

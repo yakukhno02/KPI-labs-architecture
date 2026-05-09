@@ -2,7 +2,7 @@ package ua.kpi.bank.analytics.acl;
 
 import org.springframework.stereotype.Component;
 import ua.kpi.bank.analytics.domain.TransactionAnalytics;
-import ua.kpi.bank.core.application.event.MoneyDepositedEvent;
+import ua.kpi.bank.core.api.MoneyDepositedEvent;
 
 import java.time.LocalDateTime;
 

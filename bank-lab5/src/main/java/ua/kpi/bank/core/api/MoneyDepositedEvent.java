@@ -1,4 +1,4 @@
-package ua.kpi.bank.core.application.event;
+package ua.kpi.bank.core.api;
 
 import java.math.BigDecimal;
 import java.util.UUID;
