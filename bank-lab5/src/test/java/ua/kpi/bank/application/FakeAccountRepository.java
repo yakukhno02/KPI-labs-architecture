@@ -1,7 +1,7 @@
 package ua.kpi.bank.application;
 
-import ua.kpi.bank.domain.model.Account;
-import ua.kpi.bank.domain.repository.AccountRepository;
+import ua.kpi.bank.core.domain.model.Account;
+import ua.kpi.bank.core.domain.repository.AccountRepository;
 
 import java.util.*;
 

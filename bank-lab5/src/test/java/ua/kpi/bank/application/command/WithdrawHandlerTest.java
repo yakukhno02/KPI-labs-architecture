@@ -2,8 +2,12 @@ package ua.kpi.bank.application.command;
 
 import org.junit.jupiter.api.Test;
 import ua.kpi.bank.application.FakeAccountRepository;
-import ua.kpi.bank.domain.factory.AccountFactory;
-import ua.kpi.bank.domain.repository.AccountRepository;
+import ua.kpi.bank.core.application.command.CreateAccountCommand;
+import ua.kpi.bank.core.application.command.CreateAccountHandler;
+import ua.kpi.bank.core.application.command.WithdrawCommand;
+import ua.kpi.bank.core.application.command.WithdrawHandler;
+import ua.kpi.bank.core.domain.factory.AccountFactory;
+import ua.kpi.bank.core.domain.repository.AccountRepository;
 
 import java.math.BigDecimal;
 

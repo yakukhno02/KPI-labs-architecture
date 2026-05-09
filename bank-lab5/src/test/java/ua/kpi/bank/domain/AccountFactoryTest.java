@@ -1,8 +1,8 @@
 package ua.kpi.bank.domain;
 
 import org.junit.jupiter.api.Test;
-import ua.kpi.bank.domain.factory.AccountFactory;
-import ua.kpi.bank.domain.model.Account;
+import ua.kpi.bank.core.domain.factory.AccountFactory;
+import ua.kpi.bank.core.domain.model.Account;
 
 import java.math.BigDecimal;
 

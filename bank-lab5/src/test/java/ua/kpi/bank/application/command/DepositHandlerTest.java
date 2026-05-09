@@ -2,9 +2,14 @@ package ua.kpi.bank.application.command;
 
 import org.junit.jupiter.api.Test;
 import ua.kpi.bank.application.FakeAccountRepository;
-import ua.kpi.bank.application.service.AuditService;
-import ua.kpi.bank.domain.factory.AccountFactory;
-import ua.kpi.bank.domain.repository.AccountRepository;
+import ua.kpi.bank.core.application.command.CreateAccountCommand;
+import ua.kpi.bank.core.application.command.CreateAccountHandler;
+import ua.kpi.bank.core.application.command.DepositCommand;
+import ua.kpi.bank.core.application.command.DepositHandler;
+import ua.kpi.bank.core.application.event.MoneyDepositedEvent;
+import ua.kpi.bank.core.application.service.AuditService;
+import ua.kpi.bank.core.domain.factory.AccountFactory;
+import ua.kpi.bank.core.domain.repository.AccountRepository;
 
 import java.math.BigDecimal;
 
@@ -41,6 +46,6 @@ class DepositHandlerTest {
 
         verify(auditService).log("Deposit: 50 USD");
 
-        verify(publisher).publishEvent(any(ua.kpi.bank.application.event.MoneyDepositedEvent.class));
+        verify(publisher).publishEvent(any(MoneyDepositedEvent.class));
     }
 }

@@ -1,7 +1,9 @@
 package ua.kpi.bank.domain.model;
 
 import org.junit.jupiter.api.Test;
-import ua.kpi.bank.domain.exception.DomainError;
+import ua.kpi.bank.core.domain.exception.DomainError;
+import ua.kpi.bank.core.domain.model.Account;
+import ua.kpi.bank.core.domain.model.Money;
 
 import java.math.BigDecimal;
 import java.util.UUID;

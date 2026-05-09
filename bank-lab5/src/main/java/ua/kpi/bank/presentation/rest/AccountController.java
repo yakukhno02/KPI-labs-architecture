@@ -2,13 +2,13 @@ package ua.kpi.bank.presentation.rest;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import ua.kpi.bank.application.command.*;
-import ua.kpi.bank.application.dto.AccountResponse;
-import ua.kpi.bank.application.dto.CreateAccountResponse;
-import ua.kpi.bank.application.query.GetAccountHandler;
-import ua.kpi.bank.application.query.GetAccountQuery;
-import ua.kpi.bank.application.query.GetAllAccountsHandler;
-import ua.kpi.bank.application.query.GetAllAccountsQuery;
+import ua.kpi.bank.core.application.command.*;
+import ua.kpi.bank.core.application.dto.AccountResponse;
+import ua.kpi.bank.core.application.dto.CreateAccountResponse;
+import ua.kpi.bank.core.application.query.GetAccountHandler;
+import ua.kpi.bank.core.application.query.GetAccountQuery;
+import ua.kpi.bank.core.application.query.GetAllAccountsHandler;
+import ua.kpi.bank.core.application.query.GetAllAccountsQuery;
 
 import java.util.List;
 import java.util.UUID;

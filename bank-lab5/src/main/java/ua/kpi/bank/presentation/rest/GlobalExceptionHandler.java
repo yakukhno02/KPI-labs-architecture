@@ -3,7 +3,7 @@ package ua.kpi.bank.presentation.rest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import ua.kpi.bank.domain.exception.DomainError;
+import ua.kpi.bank.core.domain.exception.DomainError;
 
 import java.util.Map;
 
