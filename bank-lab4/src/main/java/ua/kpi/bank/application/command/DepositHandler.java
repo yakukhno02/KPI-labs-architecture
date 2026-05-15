@@ -26,9 +26,13 @@ public class DepositHandler {
         ));
 
         accountRepository.save(account);
-        auditService.log(
-                "Deposit: " + command.amount() + " " + command.currency()
-        );
+
+        try {
+            auditService.log("Deposit: " + command.amount() + " " + command.currency());
+        } catch (Exception e) {
+            System.out.println("Sync audit failed");
+        }
+
         publisher.publishEvent(
                 new MoneyDepositedEvent(
                         account.getId(),
